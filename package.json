@@ -1,0 +1,20 @@
+{
+  "name": "thordemo8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ziheng (Peter)",
+  "license": "MIT",
+  "dependencies": {
+    "@vechain/connex-framework": "^1.1.1",
+    "@vechain/connex.driver-nodejs": "^1.2.0-beta3",
+    "await-to-js": "^2.1.1",
+    "myvetools": "^1.0.1",
+    "thor-devkit": "^1.2.0",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.4"
+  }
+}
