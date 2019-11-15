@@ -1,9 +1,9 @@
 import { Framework } from '@vechain/connex-framework';
 import { Driver, SimpleNet, SimpleWallet } from '@vechain/connex.driver-nodejs';
 
-import { extensionAddr } from 'myvetools/src/built-in';
-import { getABI, getSolcABI, getSolcBin } from 'myvetools/src/utils';
-import { decodeEvent, getReceipt, deployContract, contractCallWithTx, } from 'myvetools/src/connexUtils';
+import { extensionAddr } from 'myvetools/dist/builtin';
+import { getABI, getSolcABI, getSolcBin } from 'myvetools/dist/utils';
+import { decodeEvent, getReceipt, deployContract, contractCallWithTx, } from 'myvetools/dist/connexutils';
 
 const acc = '0x8580C3BFF10f2886B7CF183a8Eb51e76d75B42c4';
 const sk = '0x29a9c5eabe185f68abeb41f4d68e04a5004c146eaa3fd8a76aa3a87b33b6f1a7';
