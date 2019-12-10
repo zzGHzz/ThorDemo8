@@ -1,4 +1,4 @@
-# ThorDemo8
+# ThorDemo8 - Transaction Runtime Information
 
 ## Introduction
 
