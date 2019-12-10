@@ -27,7 +27,7 @@ const sk = '0x29a9c5eabe185f68abeb41f4d68e04a5004c146eaa3fd8a76aa3a87b33b6f1a7';
     const abi = JSON.parse(abiStr);
     const addr = await deployTestExt(connex, timeout, acc, bytecode, abi, extensionAddr);
 
-    console.log('\n# Call dummyFunc');
+    console.log('\n# Call TestExtention.dummyFunc');
     const txResponse = await contractCallWithTx(
         connex, acc, 500000, addr, 0, getABI(abi, 'dummyFunc', 'function')
     );
@@ -49,7 +49,7 @@ async function deployTestExt(
         connex, txSender, 2000000, '0x0', bytecode, getABI(abi, '', 'constructor'), ext
     );
 
-    console.log('\tTXID (contract deployment): ' + txResponse.txid);
+    console.log('\tTXID: ' + txResponse.txid);
     const receipt = await getReceipt(connex, timeout, txResponse.txid);
     const addr = receipt.outputs[0].contractAddress;
     console.log('\tContract Address: ' + addr);
