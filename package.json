@@ -9,12 +9,12 @@
   "author": "Ziheng (Peter)",
   "license": "MIT",
   "dependencies": {
-    "@vechain/connex-framework": "^1.1.1",
-    "@vechain/connex.driver-nodejs": "^1.2.0-beta3",
+    "@vechain/connex-framework": "^1.1.2",
+    "@vechain/connex.driver-nodejs": "^1.2.0-beta5",
     "await-to-js": "^2.1.1",
     "myvetools": "^1.0.4",
-    "thor-devkit": "^1.2.2",
-    "ts-node": "^8.5.2",
-    "typescript": "^3.7.2"
+    "thor-devkit": "^1.2.3",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
   }
 }

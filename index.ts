@@ -31,10 +31,11 @@ const sk = '0x29a9c5eabe185f68abeb41f4d68e04a5004c146eaa3fd8a76aa3a87b33b6f1a7';
     const txResponse = await contractCallWithTx(
         connex, acc, 500000, addr, 0, getABI(abi, 'dummyFunc', 'function')
     );
-    console.log('\ttxid: ' + txResponse.txid);
+    console.log('\tTXID (obtained after sending TX): ' + txResponse.txid);
+    
     const receipt = await getReceipt(connex, timeout, txResponse.txid);
     const decoded = decodeEvent(receipt.outputs[0].events[0], getABI(abi, 'TxID', 'event'));
-    console.log('\tLogged txid: ' + decoded['txID']);
+    console.log('\tTXID (obtained at runtime and logged in Receipt): ' + decoded['txID']);
 
     driver.close();
 })().catch(err => {
@@ -48,10 +49,10 @@ async function deployTestExt(
         connex, txSender, 2000000, '0x0', bytecode, getABI(abi, '', 'constructor'), ext
     );
 
-    console.log('\ttxid: ' + txResponse.txid);
+    console.log('\tTXID (contract deployment): ' + txResponse.txid);
     const receipt = await getReceipt(connex, timeout, txResponse.txid);
     const addr = receipt.outputs[0].contractAddress;
-    console.log('\tAddress: ' + addr);
+    console.log('\tContract Address: ' + addr);
 
     return addr;
 }
